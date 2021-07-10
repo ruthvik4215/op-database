@@ -1,14 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(request):
-	return HttpResponse("<h1>Database</h1>")
-
-def login(request):
-	return HttpResponse("<h1>This is the login page.</h1>")
-
-def about(request):
-	return HttpResponse("<h1>This is about page.</h1>")
-
-def add(request):
-	return HttpResponse("<h1>Sorry, you can't add any patreons.</h1>")
+def index(request, id):
+	if(id == "cx5607"):
+		return HttpResponse("<h1>%s</h1>"%"cx-b5607-tc57-bp23-rolr2p");
+	else:
+		return HttpResponse("<h1>Entered id: %s</h1>"%id);
