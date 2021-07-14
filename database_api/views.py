@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(request, id):
-	if(id == "cx5607"):
-		return HttpResponse("<h1>%s</h1>"%"cx-b5607-tc57-bp23-rolr2p");
+def index(request):
+	return HttpResponse("<h1>Home page.</h1>")
+
+def home(request, id):
+	if(id == "bspr"):
+		tag = "Ruthvik"
+		return render(request, "database_api/home.html", {"name":tag, "id":id})
 	else:
-		return HttpResponse("<h1>Entered id: %s</h1>"%id);
+		return render(request, "database_api/home.html", {"name":id, "id":id})
+
+def secret_code(request, scode):
+	if(scode == "bspr"):
+		return render(request, "database_api/home.html", {"name":"ruthvik"})
+	else:
+		return HttpResponse("<h1>Wrong code.</h1>")
