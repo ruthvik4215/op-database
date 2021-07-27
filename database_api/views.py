@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 
-def home(request):
-	return HttpResponse("<h1>This is Home Page.</h1>")
+def home(req):
+	return JsonResponse("hello", safe=False)
