@@ -1,3 +1,10 @@
+interface User {
+    firstName: String,
+    lastName: String,
+    age: Number,
+    dateCreated: Date,
+};
+
 const scaleName = {
     c:'celsius',
     f:'fahreinheit'
